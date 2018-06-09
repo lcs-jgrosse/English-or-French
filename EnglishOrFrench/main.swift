@@ -29,7 +29,6 @@ while (true) {
 // Now get the actual lines
 var englishCounter = 0
 var frenchCounter = 0
-var lineInput = ""
 
 print("Enter \(n) lines of text:")
 
@@ -37,13 +36,11 @@ for counter in 1...n {
     
     print("Line \(counter)")
     
-    guard let input = readLine() else {
+    guard let lineInput = readLine() else {
         
         continue
         
     }
-    
-    lineInput = input
     
     if lineInput.count < 1 || lineInput.count > 100 {
         
