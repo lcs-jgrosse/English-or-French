@@ -8,26 +8,42 @@ import Foundation
 // INPUT
 // Collect and filter user input here
 
+// Frirst, wee need the number of lines
+var n = 0
+while (true) {
+    print("Ho many lines?")
+    guard let expectedLines = readLine() else {
+        continue
+    }
+    let integerExpectedLines = Int(expectedLines)!
+    
+    n = integerExpectedLines
+    
+    break
+}
+
+
 // PROCESS
 // Implement the primary logic of the problem here
 // Some output may be given here if you desire
+// Now get the actual lines
+print("Enter \(n) lines of text:")
 
-// Example of how to collect multiple input lines
-let expectedLines = 4
-print("Please enter the \(expectedLines) lines of text:")
-for _ in 1...expectedLines {
+for counter in 1...n {
     
-    // Get the input (use guard-let to guarantee it is not nil)
-    // and then print it out
-    guard let givenLine = readLine() else {
-        // If someone enters nil input, just skip to the next line
+    print("Line \(counter)")
+    
+    guard let lineInput = readLine() else {
+        
         continue
+        
     }
     
-    // Now we have the line, we can print it out, analyze it as needed, et cetera
-    print(givenLine)
-    
+    print(lineInput)
+    let englishCounter = lineInput
+    print(englishCounter)
 }
+
 
 // OUTPUT
 // Report results to the user here
